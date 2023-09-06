@@ -714,7 +714,7 @@ void CSharpResourceImpl::OnCreateBaseObject(alt::IBaseObject* object)
         }
     case alt::IBaseObject::Type::OBJECT:
         {
-            const auto altObject = dynamic_cast<alt::IObject*>(object);
+            auto altObject = dynamic_cast<alt::IObject*>(object);
             OnCreateBaseObjectDelegate(altObject, altObject->GetType(), altObject->GetID());
             break;
         }
