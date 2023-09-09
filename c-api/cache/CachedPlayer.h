@@ -100,6 +100,9 @@ namespace cache
 #endif
         }
 
+
+        void SetMultipleMetaData(const std::unordered_map<std::string, alt::MValue>& values) override {};
+
     	std::string _name;
     	std::string GetName() const override {
     		return _name;
@@ -482,6 +485,9 @@ namespace cache
 
         void SetLocalMetaData(const std::string& key, alt::MValue val) override {}
     	void DeleteLocalMetaData(const std::string& key) override {}
+
+        void SetMultipleSyncedMetaData(const std::unordered_map<std::string, alt::MValue>& values) override {}
+        void SetMultipleStreamSyncedMetaData(const std::unordered_map<std::string, alt::MValue>& values) override {}
 
         uint32_t _interiorLocation;
         uint32_t GetInteriorLocation() const override {

@@ -162,6 +162,8 @@ namespace cache
     		}
     	}
 
+        void SetMultipleMetaData(const std::unordered_map<std::string, alt::MValue>& values) override {};
+
         alt::IPlayer* _driver;
         alt::IPlayer* GetDriver() const override {
 			return _driver;
@@ -786,6 +788,9 @@ namespace cache
         {
 	        return _brakeLevel;
         }
+
+        void SetMultipleSyncedMetaData(const std::unordered_map<std::string, alt::MValue>& values) override {}
+        void SetMultipleStreamSyncedMetaData(const std::unordered_map<std::string, alt::MValue>& values) override {}
 #endif
 #ifdef ALT_CLIENT_API
     	float _wheelSpeed;
